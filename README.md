@@ -7,7 +7,11 @@ Background
 Project Overview
 Plan for Blog
 
+### Links to Resources
+
 ### Timelines Build steps and Month by Month
+
+### Gathering the Parts
 
 ### Hardware (3d-printed Body)
 
