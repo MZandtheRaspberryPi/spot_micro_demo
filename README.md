@@ -19,7 +19,40 @@ Now imagine you were programming a robot to do this task. Assuming you had a rob
 [Slack for SpotMicro Community](https://spotmicroai-inviter.herokuapp.com/). Lots of builders hang out here and are generally quite helpful in answering questions and giving tips.  
 [Repo I used for software](https://github.com/mike4192/spotMicro). There are many different code repositories with different approaches to programming SpotMicro. I chose to use this one as it supported ROS and I liked the walking gait implemented. I contributed to this code repository as I was setting up my robot.  
 
-### Timelines Build steps and Month by Month
+### Timeline
+August 2020  
+* Thoroughly read documentation
+* Planned Electronics
+* Planned which 3d Models to Use
+* Ordered 14 Servos from Bangood  
+September 2020
+* Banggood servo order delayed due to no supply, I cancelled in response
+* Re-ordered servos from Aliexpress
+* Miscellaneous other orders from Bangood, Aliexpress, and Amazon for other parts
+* Started 3d Printing parts
+ * Printed Chasis
+ * Printed some leg pieces (later realized they were misprinted, and had to re-print them)
+* Assembled an Arduino-based Controller
+* Gathered most of the other electronics (except Servos)
+October 2020
+* Received some servos. Order was half the servos I ordered, half another type of (cheaper) servos that didn't meet my specifications. Began negotiations with Aliexpress and Seller for refund
+* Ordered 4 servos from a different Aliexpress seller, paying for fast shipping, expecting Aliexpress dispute process on other order to result in a partial refund
+* Started to assemble legs, with the limited servos I had
+* had initial hardware trouble with legs and ended up cutting one open to extract the servo. Learned to glue nuts in place so that they don't rotate with screw when extracating
+November 2020
+* Tested power system
+* Continued with leg assembly
+* Was able to do hardware tests with power
+* Promptly broke a servo. Unfortunately I only had the exact number I needed, so I then needed to order more. Given the horror, I order some from Amazon and paid for shipping $$$
+* Continued assembly and hardware testing
+* 1st contribution to Mike4192's spotMicro repository 
+December 2020
+* Received Servos from Amazon
+* Settled dispute with Aliexpress. Worked out as expected, but seller was of no hope, it was Aliexpress that helped
+* Continued assembly, got to a point where could test with power again
+* Sprinted through config and testing to meet Dec 31st goal of walking
+* Tested a Lidar I received for Christmas, but in isolation, not with Spot Micro
+* Acheived Goal
 
 ### Gathering the Parts
 
