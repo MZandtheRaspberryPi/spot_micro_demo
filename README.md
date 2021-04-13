@@ -25,6 +25,7 @@ August 2020
 * Planned Electronics
 * Planned which 3d Models to Use
 * Ordered 14 Servos from Bangood  
+
 September 2020
 * Banggood servo order delayed due to no supply, I cancelled in response
 * Re-ordered servos from Aliexpress
@@ -34,11 +35,13 @@ September 2020
  * Printed some leg pieces (later realized they were misprinted, and had to re-print them)
 * Assembled an Arduino-based Controller
 * Gathered most of the other electronics (except Servos)
+
 October 2020
 * Received some servos. Order was half the servos I ordered, half another type of (cheaper) servos that didn't meet my specifications. Began negotiations with Aliexpress and Seller for refund
 * Ordered 4 servos from a different Aliexpress seller, paying for fast shipping, expecting Aliexpress dispute process on other order to result in a partial refund
 * Started to assemble legs, with the limited servos I had
 * had initial hardware trouble with legs and ended up cutting one open to extract the servo. Learned to glue nuts in place so that they don't rotate with screw when extracating
+
 November 2020
 * Tested power system
 * Continued with leg assembly
@@ -46,6 +49,7 @@ November 2020
 * Promptly broke a servo. Unfortunately I only had the exact number I needed, so I then needed to order more. Given the horror, I order some from Amazon and paid for shipping $$$
 * Continued assembly and hardware testing
 * 1st contribution to Mike4192's spotMicro repository 
+
 December 2020
 * Received Servos from Amazon
 * Settled dispute with Aliexpress. Worked out as expected, but seller was of no hope, it was Aliexpress that helped
