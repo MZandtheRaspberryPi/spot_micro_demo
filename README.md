@@ -30,9 +30,9 @@ September 2020
 * Banggood servo order delayed due to no supply, I cancelled in response
 * Re-ordered servos from Aliexpress
 * Miscellaneous other orders from Bangood, Aliexpress, and Amazon for other parts
-* Started 3d Printing parts
- * Printed Chasis
- * Printed some leg pieces (later realized they were misprinted, and had to re-print them)
+* Started 3d Printing parts 
+  * Printed Chasis
+  * Printed some leg pieces (later realized they were misprinted, and had to re-print them)
 * Assembled an Arduino-based Controller
 * Gathered most of the other electronics (except Servos)
 
