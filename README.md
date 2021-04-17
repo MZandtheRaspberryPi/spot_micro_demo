@@ -173,7 +173,7 @@ Another mechanical mechanism used in this robot are ball bearings. Often times w
 Here is a photo from mid December where you can see I've roughly assembled most of the legs. You can also see the shoulder pieces on top of the legs which are not part of the default models. This is from mike1492 as mentioned in the 3d Printing section, and gives more support to the legs:  
 ![rough_all_parts](screenshots/20201216_183135.jpg)  
 
-And another photo from mid December where you can see I've roughly assembled what kind of looks like a dog. Note the messy wiring:  
+And another photo from mid December where you can see I've roughly assembled what kind of looks like a dog. Note the messy wiring which will eventually get cleaned up:  
 ![rough_all_assembly](screenshots/20201217_162202.jpg)  
 
 I of course ran into a lot of issues during this assembly. I'll highlight a couple of them below: 
