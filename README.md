@@ -72,7 +72,11 @@ One last consideration would be cable management. This picture looks quite chaot
 I asked for some feedback on this plan from members of the Spot Micro community and got some great feedback like how to do power management.  
 ![electronics_feedback](screenshots/feedback_electronics.PNG)  
 
+I then planned a spreadsheet of all the parts I would need to buy, where to source them, and how much they would cost. The entire project cost about $800, give or take. Plus four months of my life, which you know, priceless :)  
+![example_spreadsheet](screenshots/example_spreadsheet_plan.png)  
+
 ### Gathering the Parts
+G
 
 ### Hardware (3d-printed Body)
 
