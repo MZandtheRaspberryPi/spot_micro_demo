@@ -161,7 +161,7 @@ You can see here me early on working on assembling 2 legs, as I didn't have enou
 3d printed parts often have extra bits of support plastic, to help stabilize parts when printing, so this has to be removed. Look at all the support I removed from these 2 legs in October:  
 ![leg_supports](screenshots/20201002_165200.jpg)  
 
-You can see here a typical mechanism for assembly. You can see 2 3d-printed parts fit together and align their holes with the mounting on a servo motor:  
+You can see here a typical mechanism for assembly. You can see 2 3d-printed parts fit together and align their holes with the mounting on a servo motor. Also interesting is that on the black piece you can quite clearly see the layers from the 3d printing, as the piece is built up one layer at a time of printed plastic:  
 ![labeled_assembly](screenshots/assembly_label.jpg)  
 
 After much hard work and finaggling parts, you can see the first leg I assembled in October. Also, i've talked about support material and how if you print a part that has a lot of support needed it can mar the surface of the part. You see that in the yellow piece here where the side has some support material on it. I think I eventually reprinted this piece with less support, or better support that didn't scar as much:  
