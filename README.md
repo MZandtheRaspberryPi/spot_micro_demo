@@ -170,7 +170,7 @@ After much hard work and finaggling parts, you can see the first leg I assembled
 Another mechanical mechanism used in this robot are ball bearings. Often times when one part fits to another part and needs to be able to move freely, ball bearings are glued into one part and the other part will stick a piece of itself into the middle of the ball bearing allowing one part to rotate on the other. Here you can see ball bearings used in the shoulder mounts I assembled in November:  
 ![ball_bearing](screenshots/20201114_164726.jpg)  
 
-Here is a photo from mid December where you can see I've roughly assembled most of the legs. You can also see, in the legs in the background, the shoulder pieces not part of the default models. This is from mike1492 as mentioned in the 3d Printing section, and gives more support to the legs:  
+Here is a photo from mid December where you can see I've roughly assembled most of the legs. You can also see the shoulder pieces on top of the legs which are not part of the default models. This is from mike1492 as mentioned in the 3d Printing section, and gives more support to the legs:  
 ![rough_all_parts](screenshots/20201216_183135.jpg)  
 
 And another photo from mid December where you can see I've roughly assembled what kind of looks like a dog. Note the messy wiring:  
