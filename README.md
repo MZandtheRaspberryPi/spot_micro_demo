@@ -8,7 +8,10 @@ Take a moment and touch your left shoulder and then move your mouse to the top l
 Now imagine you were programming a robot to do this task. Assuming you had a robot arm that had the same joints as your human arm, you'd have to move all of those joints in coordination, to a pretty high degree of precision and accuracy, and carefully control the force applied from the arm to objects in the real world so as to not break anything. For a human these tasks are intuitive. For a robot they can be complex to model. When programming Spot Micro, to acheive complicated motion like walking, sitting, and standing, I used code that Mike4192 published that implements kinematic modelling to command the robot in space and solve for these joint positions.    
 
 ### Presentation Plan
-We'll talk about the project and it's phases for me; we'll talk about the software and Robot Operating System (ROS); and then we'll talk about inverse kinematic models and how to coordinate movement across multiple joints.
+We'll talk about:
+* The project and it's phases for me. This was the biggest and most complex thing I'd built to date.
+* The software and Robot Operating System (ROS).
+* Inverse kinematic models and how to coordinate movement across multiple joints.
 
 ### Project Phases
 1. Planning Electronics
