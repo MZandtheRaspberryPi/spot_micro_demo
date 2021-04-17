@@ -12,7 +12,7 @@ We'll talk about the project and it's phases for me; we'll talk about the softwa
 
 ### Project Phases
 1. Planning Electronics
-2. Gather Electonrics
+2. Gather Electronics
 3. 3d Print Parts
 4. Assemble hardware
 5. Integrate Software
