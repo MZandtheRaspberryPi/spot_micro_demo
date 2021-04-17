@@ -54,7 +54,7 @@ December 2020
 * Continued assembly, got to a point where could test with power again
 * Sprinted through config and testing to meet Dec 31st goal of walking
 * Tested a Lidar I received for Christmas, but in isolation, not with Spot Micro
-* Acheived Goal  
+* Acheived goal of walking 
 
 ### Planning the Electronics
 Before you can buy parts, you have to decide what parts you need! This involved looking through various pieces of documentation [here,](https://spotmicroai.readthedocs.io/en/latest/gettingStarted/) and planning out my electronics.  
