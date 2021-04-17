@@ -164,7 +164,7 @@ You can see here me early on working on assembling 2 legs, as I didn't have enou
 You can see here a typical mechanism for assembly. You can see 2 3d-printed parts fit together and align their holes with the mounting on a servo motor:  
 ![labeled_assembly](screenshots/assembly_label.jpg)  
 
-After much hard work and finaggling parts, you can see the first leg I assembled in October:  
+After much hard work and finaggling parts, you can see the first leg I assembled in October. Also, i've talked about support material and how if you print a part that has a lot of support needed it can mar the surface of the part. You see that in the yellow piece here where the side has some support material on it. I think I eventually reprinted this piece with less support, or better support that didn't scar as much:  
 ![first_leg](screenshots/20201002_211220.jpg)  
 
 Another mechanical mechanism used in this robot are ball bearings. Often times when one part fits to another part and needs to be able to move freely, ball bearings are glued into one part and the other part will stick a piece of itself into the middle of the ball bearing allowing one part to rotate on the other. Here you can see ball bearings used in the shoulder mounts I assembled in November:  
