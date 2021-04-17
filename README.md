@@ -133,6 +133,8 @@ And the end result is somewhat magical, of the piece rising up layer by layer:
 You can imagine how rotating a part and printing it on its side could change how the layers would be construct and the print would work faster or slower. There are more efficient ways to print some parts by rotating, laying it flat, changing supports, ect. So, the community was also very helpful in guiding me towards efficient ways to print:  
 ![feedback_printing](screenshots/feedback_printing.PNG)  
 
+I did end up using some parts provided by mike4192, which fit into the shoulder and provide more support for each leg so that weight is better distributed to the body of the robot. Details [here](https://github.com/mike4192/spotMicro/blob/master/docs/additional_hardware_description.md).
+
 While printing the parts, I ran into some issues. Namely:  
 
 I had some issues where I would print a part, and the screw holes were melted together or not in the right shape. This was caused by a sloppy printer where the head missed some layers and wasn't moving precisely. Tightening the belts on the 3d printer helped with this (but NOT overtightening).  
@@ -208,4 +210,5 @@ I used 14 gauge power cables for lipo to bms system and bms system to prototypin
 [Repo I used for software](https://github.com/mike4192/spotMicro). There are many different code repositories with different approaches to programming SpotMicro. I chose to use this one as it supported ROS and I liked the walking gait implemented. I contributed to this code repository as I was setting up my robot.  
 [Slack for SpotMicro Community](https://spotmicroai-inviter.herokuapp.com/). Lots of builders hang out here and are generally quite helpful in answering questions and giving tips.  
 [Repo I used for software](https://github.com/mike4192/spotMicro). There are many different code repositories with different approaches to programming SpotMicro. I chose to use this one as it supported ROS and I liked the walking gait implemented. I contributed to this code repository as I was setting up my robot.  
+[Additional 3d Printed Parts](https://github.com/mike4192/spotMicro/blob/master/docs/additional_hardware_description.md). I used parts from mike4192 that provide more support to each leg and distribute weight to the body of the robot better.
 
