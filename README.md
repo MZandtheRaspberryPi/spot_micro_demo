@@ -75,7 +75,7 @@ One last consideration would be cable management. This picture looks quite chaot
 I asked for some feedback on this plan from members of the Spot Micro community and got some great feedback like how to do power management.  
 ![electronics_feedback](screenshots/feedback_electronics.PNG)  
 
-I then planned a spreadsheet of all the parts I would need to buy, where to source them, and how much they would cost. The entire project cost about $800, give or take. Plus four months of my life, which you know, priceless :)  
+I then planned a spreadsheet of all the parts I would need to buy, where to source them, and how much they would cost. The entire project cost about $800, give or take. It may have cost me more than someone else as I bought a lot of tools like pliers, hot glue gun, ect that others may have. I also wasn't trying to do it as cheap as i possibly could. That said, it also cost me four months of my life, which you know, priceless :)  
 ![example_spreadsheet](screenshots/example_spreadsheet_plan.png)  
 
 ### Gathering the Parts
@@ -121,7 +121,7 @@ Here you can see me opening the piece of the model I want to print:
 The software will slice it into layers for the 3d Printer and generate any support needed (as you can't print on air).  
 ![all_layers](screenshots/all_layers_slice.png)  
 
-Behind the scenes it will generate the gcode for the printer, which is a set of instructions like move the nozzle to this xyz point and extrude this amount of plastic. Here I'm highlighting one of the first lines where it sends to head of the printer to the bottom left corner, "homing it". Then I'm highlighting one section where the print starts which is a series of commands to move the nozzle and extrude plastic. That later section basically says go to 79X and 56Y and extrude to the .18mm fillament point.  
+Behind the scenes it will generate the gcode for the printer, which is a set of instructions like move the nozzle to this xyz point and extrude this amount of plastic. Here I'm highlighting one of the first lines where it sends to head of the printer to the bottom left corner, "homing it". Then I'm highlighting one section where the print starts which is a series of commands to move the nozzle and extrude plastic. That later section basically says go to 79mmX and 56mmY and extrude to the .18mm fillament point.  
 ![gcode](screenshots/g_code_example_2.png)  
 
 The head of the printer will move around during the print printing:  
@@ -133,7 +133,62 @@ And the end result is somewhat magical, of the piece rising up layer by layer:
 You can imagine how rotating a part and printing it on its side could change how the layers would be construct and the print would work faster or slower. There are more efficient ways to print some parts by rotating, laying it flat, changing supports, ect. So, the community was also very helpful in guiding me towards efficient ways to print:  
 ![feedback_printing](screenshots/feedback_printing.PNG)  
 
+While printing the parts, I ran into some issues. Namely:  
+
+I had some issues where I would print a part, and the screw holes were melted together or not in the right shape. This was caused by a sloppy printer where the head missed some layers and wasn't moving precisely. Tightening the belts on the 3d printer helped with this (but NOT overtightening).  
+
+I also had an issue where the soles of the feet, printed in ABS weren't sticking to the bed. For this I used a glue stick, and also added a raft to help support the part as it printed.  
+
+I printed out all the pieces for four legs first, then tried to assembled and realized some of the prints had issues, were sloppy, or wrong. I should have printed out parts for one leg first, tried to assemble, and fixed issues to save plastic and time.  
+
+My yellow fillament became very prittle and would snap many times mid-print. I tried to work with this for awhile by pausing, removing broken fillament, threading new, but eventually this became infeasible as during a 7hr print it would happen 4 or 5 times and if i didn't catch it every time ruin the print. I eventually threw this fillament away and ordered new fillament with a higher tolerance. I think this fillament was stored poorly by me and suffered as a result. The new fillament i ordered was PLA+ which is more flexible and forgiving instead of being super brittle, but needs a higher nozzle temperature.  
+
+I had trouble fitting the sole of the foot to the foot. I realized that my 3d print was partially to blame, as the part was likely shifting while printing and shrinking. I also saw some people had posted new models of the sole claiming to have "fixed" the issue. These ended up not working for me either, likely due to difficulty printing in ABS, so I simply upsided the parts I had to 110% and printed them, and this then let me fit the sole of the foot to the foot.  
+
+I also had some trouble with redesigning and printing the mounting for all my electronics. I was using an RPI4 and a differently sized motor driver board than many others, so had to model this in Fusion360 and print it out myself. This was iterative and took me much trial and error. In retrospect, I would print a small piece with mounting holes for the motor driver board, test fit this, then integrate it into a larger 3d modelled piece to reduce trial/error time.
+
+### Hardware (Assembly)
+Once I had printed out all the parts I had to assemble them. In reality this distinction between printing and assembly is an artificial one, like many human constructs invented to bring some semblence of order and normality to a chaotic and shifting reailty. I actually printed and assembled continually, for example when I had printed out the chasis parts I assembled them and then the legs parts I printed and assembled. There was a lot of taking apart stuff and putting it back together to fix stuff even when I had all the parts printed.  
+
+One of the first pieces I printed and assembled in September was the chasis:  
+![chasis_assembly](screenshots/20200922_213146.jpg)  
+
+You can see here me early on working on assembling 2 legs, as I didn't have enough servo motors to assemble all 4.  
+![leg_assembly](screenshots/20201002_155102.jpg)  
+
+3d printed parts often have extra bits of support plastic, to help stabilize parts when printing, so this has to be removed. Look at all the support I removed from these 2 legs in October:  
+![leg_supports](screenshots/20201002_165200.jpg)  
+
+You can see here a typical mechanism for assembly. You can see 2 3d-printed parts fit together and align their holes with the mounting on a servo motor:  
+![labeled_assembly](screenshots/assembly_label.jpg)  
+
+After much hard work and finaggling parts, you can see the first leg I assembled in October:  
+![first_leg](screenshots/20201002_211220.jpg)  
+
+Another mechanical mechanism used in this robot are ball bearings. Often times when one part fits to another part and needs to be able to move freely, ball bearings are glued into one part and the other part will stick a piece of itself into the middle of the ball bearing allowing one part to rotate on the other. Here you can see ball bearings used in the shoulder mounts I assembled in November:  
+![ball_bearing](screenshots/20201114_164726.jpg)  
+
+Here is a photo from mid December where you can see I've roughly assembled most of the legs and chasis:  
+![rough_all_parts](screenshots/20201216_183135.jpg)  
+
+And another photo from mid December where you can see I've roughly assembled what kind of looks like a dog. Note the messy wiring:  
+![rough_all_assembly](screenshots/20201217_162202.jpg)  
+
+I of course ran into a lot of issues during this assembly. I'll highlight a couple of them below: 
+
+One initial hurdle was just keeping track of all the parts and where they all went. This was solved partly by keeping the 3d Model open and moving it around and zooming in/out as I assembled the physical parts. It was also partly solved by taking things apart and putting them back together many times.  
+
+I had a lot of trouble with some parts where I had to remove a lot of support, where the surface got marred and unsmooth and had trouble fitting with other parts. This I solved by reprinting and modifying the parts orientation when printing or where support was placed to avoid lots of scaring and support.  
+
+I also had some trouble with glue. Namely the super glue (CA Glue) was insanely dangerous and I got it on my fingers a lot. If that happens you basically just wait for the glue to come off. Another issue was that when I used a lot of glue, it took hours to dry. I learned that less is usually better with super glue, unless you're trying to fill a cavity and need glue to be part of the structure.  
+
+One of my most frustrating issues came when I burned out a servo and needed to replace it. I tried to unscrew my part and realized that though the screw was turning my part was still tight together. I realized this was due to the nutt being free to rotate inside the part. It shouldn't be, the part was designed so that the cavity where the nutt is, is small enough that the nutt isn't free to rotate, but I must have twisted too hard and the nutt broke free. This prevented me from dissasembling the part and removing the servo. Given the servos are expensive and I had a limited number, I chose to take a blow torch, warm a knife, and cut through the plastic which melts easily to remove the servo. It's much cheaper to reprint the part, though it does take time, than to order new and wait for new servos.  
+![screw_rotation](screenshots/screw_rotation.gif)  
+
 ### Hardware (Electronics)
+Soldering BMS, ran into some trouble getting solder to stick to pads, but what helped me was heating up the pad quite a bit, then applying solder to it by tapping it on pad (not on soldering pen tip). Then I could apply solder, then my cables stuck more.
+
+I used 14 gauge power cables for lipo to bms system and bms system to prototyping board. I used a deans/T connector solder to power cables to connect lipo.
 
 ### Software (OS)
 
