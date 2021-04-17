@@ -121,7 +121,7 @@ Here you can see me opening the piece of the model I want to print:
 The software will slice it into layers for the 3d Printer and generate any support needed (as you can't print on air).  
 ![all_layers](screenshots/all_layers_slice.png)  
 
-Behind the scenes it will generate the gcode for the printer, which is a set of instructions like move the nozzle to this xyz point and extrude this amount of plastic. Here I'm highlighting one of the first lines where it sends to head of the printer to the bottom left corner, "homing it". Then I'm highlighting one section where the print starts which is a series of commands to move the nozzle and extrude plastic.  
+Behind the scenes it will generate the gcode for the printer, which is a set of instructions like move the nozzle to this xyz point and extrude this amount of plastic. Here I'm highlighting one of the first lines where it sends to head of the printer to the bottom left corner, "homing it". Then I'm highlighting one section where the print starts which is a series of commands to move the nozzle and extrude plastic. That later section basically says go to 79X and 56Y and extrude to the .18mm fillament point.  
 ![gcode](screenshots/g_code_example_2.png)  
 
 The head of the printer will move around during the print printing:  
