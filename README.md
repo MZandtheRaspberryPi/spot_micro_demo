@@ -14,7 +14,7 @@ We'll talk about the project and it's phases for me; we'll talk about the softwa
 1. Planning Electronics
 2. Gather Electonrics
 3. 3d Print Parts
-4. Assembly hardware
+4. Assemble hardware
 5. Integrate Software
 
 ### Timeline
