@@ -70,7 +70,7 @@ Another big consideration was what Microprocessor to use. Various community memb
 One last consideration would be cable management. This picture looks quite chaotic, and I needed to think through how to simplify wiring both for safety reasons as well as ease of repair. Building this into my schema would probably have been a good idea instead of leaving this to the last minute.  
 
 I asked for some feedback on this plan from members of the Spot Micro community and got some great feedback like how to do power management.  
-![electronics_feedback](screenshots/feedback_electronics.png)  
+![electronics_feedback](screenshots/feedback_electronics.PNG)  
 
 ### Gathering the Parts
 
