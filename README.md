@@ -235,7 +235,7 @@ I eventually redid all the wiring to tidy up cables. This is essential to help m
 I got a hobbyist Lidar for Christmas from my dad, you can see me testing it here seperate from the robot. I haven't yet integrated it.  
 ![lidar](screenshots/lidar_test.gif)  
 
-This is now late December and I'm sprinting to make my goal before the new year. You can see here me testing standing with a barebones robot with none of its covers: 
+This is now late December and I'm sprinting to make my goal before the new year. You can see here me testing standing with a barebones robot with none of its covers:  
 ![standing](screenshots/spot_standing.gif)  
 
 Which of course eventually leads to my first successful walk in late December:  
