@@ -252,6 +252,14 @@ When soldering wires to the BMS, I ran into some trouble getting the solder to s
 That said, with the BMS system I would encounter an issue where it would cut voltage from 7.4v to 3 or 4vs shortly after turning a system on. I think I may have shorted that board in testing, so I eventually removed it which is a bit dangerous as there's nothing protecting the lipo now.
 
 ### Software (OS)
+For software, I used Mike4192's code repository and contributed to it. The big reason I liked his approach was because it was based on Robot Operating System (ROS) which is a middleware system that makes it easy to integrate and add stuff on.  
+
+ROS lets many different ndoes talk to each other through topics and a publisher/subscriber model over a network. You can imagine one node with a camera, one node doing computer vision off of the camera, and one node controlling movement of the robot. The computer vision could be on a server running on the local network, the movement control on a microcontroller on the robot as well as the camera. That's powerful!  
+
+You can read a bit more about ROS and look at some introductory tutorials on various aspects of the system [here](http://wiki.ros.org/ROS/Tutorials).  
+
+Mike4192's ROS node structure during regular operation (as of 4/18/2021) looks like the below. You can see 4 nodes, /spot_micro_keyboard_command_node on the far left is listening to keyboard commands and communicating with the node in the middle, /spot_micro_motion_cmd_node. It is communicating via ROS topics, namely the 5 topics you see between the two nodes. The nodes on the far right, /spot_micro_plot_node and /n__rviz are two nodes that help visualize the movement of the robot.  
+![ros_node_graph](screenshots/rosgraph.png)   
 
 robot scrunched like bug, bad calibration
 20201221_194550.jpg
@@ -272,5 +280,7 @@ robot scrunched like bug, bad calibration
 [Repo I used for software](https://github.com/mike4192/spotMicro). There are many different code repositories with different approaches to programming SpotMicro. I chose to use this one as it supported ROS and I liked the walking gait implemented. I contributed to this code repository as I was setting up my robot.  
 [Slack for SpotMicro Community](https://spotmicroai-inviter.herokuapp.com/). Lots of builders hang out here and are generally quite helpful in answering questions and giving tips.  
 [Repo I used for software](https://github.com/mike4192/spotMicro). There are many different code repositories with different approaches to programming SpotMicro. I chose to use this one as it supported ROS and I liked the walking gait implemented. I contributed to this code repository as I was setting up my robot.  
-[Additional 3d Printed Parts](https://github.com/mike4192/spotMicro/blob/master/docs/additional_hardware_description.md). I used parts from mike4192 that provide more support to each leg and distribute weight to the body of the robot better.
+[Additional 3d Printed Parts](https://github.com/mike4192/spotMicro/blob/master/docs/additional_hardware_description.md). I used parts from mike4192 that provide more support to each leg and distribute weight to the body of the robot better.  
+[ROS Tutorials](http://wiki.ros.org/ROS/Tutorials). This is a link to ROS tutorials that go through what topics, subscribers, and other ROS concepts are and how to use them.  
+
 
