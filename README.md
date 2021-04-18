@@ -190,11 +190,69 @@ In the picture below, you can see I cut through the two parts. The yellow fillam
 ![screw_rotation](screenshots/screw_rotation.gif)  
 
 ### Hardware (Electronics)
-Soldering BMS, ran into some trouble getting solder to stick to pads, but what helped me was heating up the pad quite a bit, then applying solder to it by tapping it on pad (not on soldering pen tip). Then I could apply solder, then my cables stuck more.
+Assembling the electronics was interesting and complex. I worked with a lot of tools like soldering irons, wire strippers, eletrical tape, helping hands, micrometer, exacto knife, zip tie, and glues. Some of these like the multimeter were new to me and I had to learn. Here's an example of my workbench post one repair:  
+![ex_workbench](screenshots/20210101_183857.jpg)  
 
-I used 14 gauge power cables for lipo to bms system and bms system to prototyping board. I used a deans/T connector solder to power cables to connect lipo.
+Before I had any of the parts I would need for the main robot I actually designed and made a controller to use that I planned to integrate. This was in September. I actually ended up reversing on this decision to focus on other aspects of the build, given the keyboard teleoperation was pretty good. I also know that a lot of people use XBOX 360 or PS4 controllers, so there's code out there to use them if I wanted to and I made not need to recreate the wheel here.  
+
+Unfortunately I got pretty far before deciding to drop the controller. I think the main purpose of this was to give me something to do while i waited for all the real parts to arrive :)  
+
+On the controller I started testing joystick inputs:  
+![joystick_test](screenshots/controller_test.gif)  
+
+You can see a pretty rough assembly of one version here:  
+![controller_assembly](screenshots/20200913_205246.jpg)  
+
+And another rough assembly of one version here that actually had a pretty nice start up animation:  
+![controller_final](screenshots/controller.gif)  
+
+From here I started testing out the battery management systems as I hadn't worked with these before. These parts are to make sure you don't draw down a lipo battery too much, which is dangerous. They'll shut off power if certain thresholds are crossed to protect the battery. Given the battery has a lot of energy in it, I'm keen to ensure its operating safely. Here's some of the first PCB soldering I did, where I used way too much solder. Don't do that! At the end of this section I'll address some of the stuff i learned about soldering w/ PCBs.   
+![bms](screenshots/20200912_113903.jpg)  
+
+From here I had received most of the electronics (except the servos) and you can see a lot of them in this picture in late September. Predominantly is the Raspberry Pi 4 that would serve as the brains of the robot:
+![most_electronics_parts](screenshots/20200922_221548.jpg)  
+
+Here you can see me testing the power system. This is a complex system because a lot of the electroncis run at 5v, wheras the servo motors run at 7.4vs (like the power source the lipo battery). So, the power system has to power some stuff at 5v, some stuff at 7.4v. It also needs to be able to deliver a lot of current, as each servo can take up to 3 amps when stalled (though it shouldn't be stalled in normal operation) and there are 12 servos. One further consideration is that sometimes, if you switch on lots of motors at once, they eat a lot of power. This can cause your electronics to briefly shut off if there's no power left over for them. Some people use capacitors to avoid this, but in my system the Lipo battery can provide enough current that this isn't an issue i've seen (yet).
+![power_system](screenshots/20201113_183724.jpg)  
+
+Here you can see how the electronics fit into the robot  chasis:  
+![chasis](screenshots/20201113_185829.jpg)  
+
+And here you can see how the chasis fits in with the rest of the robot:  
+![chasis and robot](screenshots/20201114_155046.jpg)  
+
+You can see here me putting on part of the shoulder mount to the chasis, I would eventually assemble all of the robot on the chasis one piece at a time:  
+![chasis and_shoulder](screenshots/20201120_175105.jpg)  
+
+Here is an exciting moment. I've wired up all of the electronics and power systems and am testing out servo movement. This scared me so much the first time I did it even though I was testing movement I didn't expect it to work and hadn't setup the robot properly. So, the leg kicked and the robot pushed itself over and I had to catch it. This test i was prepared and setup a stack of books to keep the robot off the ground and let its legs move without consequences.  
+![1st movement](screenshots/first_movement_test.gif)  
+
+I eventually redid all the wiring to tidy up cables. This is essential to help me debug issues--if I can't follow a wire I can't fix it. I'm trying to be tidier about wiring systems, but I still have some stuff to learn here...
+![tidier wires](screenshots/20201217_172307.jpg)  
+
+I got a hobbyist Lidar for Christmas from my dad, you can see me testing it here seperate from the robot. I haven't yet integrated it.  
+![lidar](screenshots/lidar_test.gif)  
+
+This is now late December and I'm sprinting to make my goal before the new year. You can see here me testing standing with a barebones robot with none of its covers: 
+![standing](screenshots/spot_standing.gif)  
+
+Which of course eventually leads to my first successful walk in late December:  
+![spot_micro_demo](screenshots/spot_micro_demo.gif)   
+
+Some of the issues I ran into were:  
+
+How to distribute power from the Lipo to the servos. The PCA9685 board I had was great for controlling lots of servos, but bad for distributing lots of power. It was capped at 3 amps, so I couldn't use it to distribute power unless I used multiple of those boards together. That, I didn't have space for. At first I put a mini breadboard inside the spot and ran power through there to the servos, but 12 amps through a proto-perma breadboard exposed to the air and rest of the robot seemed like a bad idea. So, I soldered on many connecting cables to my big power cables, like a hydra neck with many heads. I did this by stripping wires, tinning them, and then sticking them to the bigger wires.  
+
+I also initially had some power issues because I was using too thin cables. To get a lot of current through, you need thick cables, so I used 14 guage cables with deans/T style connectors.
+
+When soldering wires to the BMS, I ran into some trouble getting the solder to stick to the pads. Part of this was my soldering iron was a bit oxidized and didn't conduct heat well, so after cleaning it and holding the iron to the solder pads on the pcb long enough, I was then able to apply solder directly to the solder pad which helped, then my cables stuck better.
+
+That said, with the BMS system I would encounter an issue where it would cut voltage from 7.4v to 3 or 4vs shortly after turning a system on. I think I may have shorted that board in testing, so I eventually removed it which is a bit dangerous as there's nothing protecting the lipo now.
 
 ### Software (OS)
+
+robot scrunched like bug, bad calibration
+20201221_194550.jpg
 
 ### Software (Walking Algo)
 
