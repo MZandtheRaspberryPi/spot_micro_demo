@@ -212,10 +212,12 @@ From here I started testing out the battery management systems as I hadn't worke
 From here I had received most of the electronics (except the servos) and you can see a lot of them in this picture in late September. Predominantly is the Raspberry Pi 4 that would serve as the brains of the robot:
 ![most_electronics_parts](screenshots/20200922_221548.jpg)  
 
-Here you can see me testing the power system. This is a complex system because a lot of the electroncis run at 5v, wheras the servo motors run at 7.4vs (like the power source the lipo battery). So, the power system has to power some stuff at 5v, some stuff at 7.4v. It also needs to be able to deliver a lot of current, as each servo can take up to 3 amps when stalled (though it shouldn't be stalled in normal operation) and there are 12 servos. One further consideration is that sometimes, if you switch on lots of motors at once, they eat a lot of power. This can cause your electronics to briefly shut off if there's no power left over for them. Some people use capacitors to avoid this, but in my system the Lipo battery can provide enough current that this isn't an issue i've seen (yet).
+Here you can see me testing the power system. This is a complex system because a lot of the electroncis run at 5v, wheras the servo motors run at 7.4vs (like the power source the lipo battery). So, the power system has to power some stuff at 5v, some stuff at 7.4v. It also needs to be able to deliver a lot of current, as each servo can take up to 3 amps when stalled (though it shouldn't be stalled in normal operation) and there are 12 servos. You'll notice the wires i'm soldering here are very thin, I eventually realized this was an issue and I needed much thicker wires.  
+
+One further consideration is that sometimes, if you switch on lots of motors at once, they eat a lot of power. This can cause your electronics to briefly shut off if there's no power left over for them. Some people use capacitors to avoid this, but in my system the Lipo battery can provide enough current that this isn't an issue i've seen (yet).
 ![power_system](screenshots/20201113_183724.jpg)  
 
-Here you can see how the electronics fit into the robot  chasis:  
+Here you can see how the electronics fit into the robot  chasis. Note the wires from the power system to the perma/proto board. I eventually decided this was a bad idea and switched to use all wires and no perma/proto board:  
 ![chasis](screenshots/20201113_185829.jpg)  
 
 And here you can see how the chasis fits in with the rest of the robot:  
