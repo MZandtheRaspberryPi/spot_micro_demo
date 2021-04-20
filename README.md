@@ -264,7 +264,23 @@ Mike4192's ROS node structure during regular operation (as of 4/18/2021) looks l
 robot scrunched like bug, bad calibration
 20201221_194550.jpg
 
-### Software (Walking Algo)
+### Software (Kinematics and Walking Algo)  
+To get Spot Micro walking, let's first understand the motors used, the hobbyist servo motors. A servo has an output shaft that can be commanded to a certain angle with a high degree of accuracy. A typical hobbyist servo has a range of 0 to 180 degrees. Here's a detailed look at a servo motor, from Wikipedia at: By oomlout - SERV-03-MI (Micro Servo), CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=19867075  
+![servo](screenshots/Micro_servo.jpg)
+
+Spot micro's leg has 3 servos in it, with leg pieces in between them. You can see 3 servos per leg in the below photo:  
+![servos_per_leg](screenshots/20201216_183135.jpg)
+
+To get Spot Micro walking, one of the first problems is how to know what angles to set each servo. Let's say we know where we want to put the top left foot in X, Y, Z space. How do we know what servo angles to command? There's a great overview of these inverse kinematics for Spot Micro that Florian Wilke, a leading member of the Spot Micro community, made [here](https://gitlab.com/custom_robots/spotmicroai/simulation/-/tree/master/Basic%20simulation%20by%20user%20Florian%20Wilk/Kinematics).  
+
+Florian uses several tools like the Pythagoreous theorem:
+C^2 = a^2 + b^2
+
+and atan2(y, x) = theta
+This picure from wikipedia does a great job showing us how atan2 can get the angle given x and y. Picture from: Dmcq, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons  
+![atan2](screenshots/Atan2_60.svg)  
+
+
 
 ### Lessons Learned
 
@@ -281,6 +297,7 @@ robot scrunched like bug, bad calibration
 [Slack for SpotMicro Community](https://spotmicroai-inviter.herokuapp.com/). Lots of builders hang out here and are generally quite helpful in answering questions and giving tips.  
 [Repo I used for software](https://github.com/mike4192/spotMicro). There are many different code repositories with different approaches to programming SpotMicro. I chose to use this one as it supported ROS and I liked the walking gait implemented. I contributed to this code repository as I was setting up my robot.  
 [Additional 3d Printed Parts](https://github.com/mike4192/spotMicro/blob/master/docs/additional_hardware_description.md). I used parts from mike4192 that provide more support to each leg and distribute weight to the body of the robot better.  
-[ROS Tutorials](http://wiki.ros.org/ROS/Tutorials). This is a link to ROS tutorials that go through what topics, subscribers, and other ROS concepts are and how to use them.  
+[ROS Tutorials](http://wiki.ros.org/ROS/Tutorials). This is a link to ROS tutorials that go through what topics, subscribers, and other ROS concepts are and how to use them.   
+[Spot Micro Inverse Kinematics Notebook](https://gitlab.com/custom_robots/spotmicroai/simulation/-/tree/master/Basic%20simulation%20by%20user%20Florian%20Wilk/Kinematics). This is a useful jupyter-notebook put together by Florian Wilke, demonstrating how one can solve for servo angles given positiosn of legs.  
 
 
