@@ -263,8 +263,13 @@ You can read a bit more about ROS and look at some introductory tutorials on var
 Mike4192's ROS node structure during regular operation (as of 4/18/2021) looks like the below. You can see 4 nodes, /spot_micro_keyboard_command_node on the far left is listening to keyboard commands and communicating with the node in the middle, /spot_micro_motion_cmd_node. It is communicating via ROS topics, namely the 5 topics you see between the two nodes. The nodes on the far right, /spot_micro_plot_node and /n__rviz are two nodes that help visualize the movement of the robot.  
 ![ros_node_graph](screenshots/rosgraph.png)   
 
-robot scrunched like bug, bad calibration
-20201221_194550.jpg
+Here are some examples of messages that are sent on topics, that the nodes subscribe to.  
+
+You can see the message on the /stand_cmd topic is rather simple, just a boolean that triggers a state transition.  
+![stand](screenshots/stand_topic.png)   
+
+The message on the /cmd_vel topic is more sophisticated. It has linear and angular velocities for the robot to move at in m/s.  
+![cmd_vel](screenshots/cmd_vel_topic.png)   
 
 ### Software (Kinematics and Walking Algo)  
 To get Spot Micro walking, let's first understand the motors used, the hobbyist servo motors. A servo has an output shaft that can be commanded to a certain angle with a high degree of accuracy. A typical hobbyist servo has a range of 0 to 180 degrees. Here's a detailed look at a servo motor, from Wikipedia at: By oomlout - SERV-03-MI (Micro Servo), CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=19867075  
@@ -303,8 +308,10 @@ L4Sin(theta3) is opposite where L4 is hypotenuse, so It's like Q
 L4Cos(theta3) is adjacent, plus L2, so E.
 theta2 = atan2(z, E) - atan2(L4Sin(theta3), L3 + L4cos(theta3))
 
-solving_theta_3.png
+solving_theta_3.png  
 
+One initial challenge in setting up the robot to walk was the calibration of the servos. Depending on how you install the servos and how you tell the robot the order of them, you can see weird stuff. For instance in the below screensot my robot was scrunched like bug because of bad calibration. You can see its kind of doing the idle pose, but shifted. That's because I had consistently mixed up the elbow joint with the hip joint in calibration for all four legs.  
+![software_challenge](screenshots/20201221_194550.jpg)   
 
 ### Lessons Learned
 
