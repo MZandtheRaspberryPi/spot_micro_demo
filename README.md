@@ -275,6 +275,14 @@ Spot micro's leg has 3 servos in it, with leg pieces in between them. You can se
 
 To get Spot Micro walking, one of the first problems is how to know what angles to set each servo. Let's say we know where we want to put the top left foot in X, Y, Z space. How do we know what servo angles to command? There's a great overview of these inverse kinematics for Spot Micro that Florian Wilke, a leading member of the Spot Micro community, made [here](https://gitlab.com/custom_robots/spotmicroai/simulation/-/tree/master/Basic%20simulation%20by%20user%20Florian%20Wilk/Kinematics).  
 
+I think that he based some of his figuring off an article that he mentions, in the INTERNATIONAL JOURNAL OF SCIENTIFIC & TECHNOLOGY RESEARCH VOLUME 6, ISSUE 09, SEPTEMBER 2017 titled Inverse Kinematic Analysis Of A Quadruped Robot, found [here](https://www.ijstr.org/final-print/sep2017/Inverse-Kinematic-Analysis-Of-A-Quadruped-Robot.pdf). This has some great equations that did a lot of the hard work for us, but unfortunately they don't show their algeabra leaving us mortals to puzzle through it:  
+
+Just for fun, which analytical methods???  
+![which_methods](screenshots/which_analytical_methods.png)  
+
+In the below drawing from Florian Wilk, theta1, theta2, theta3 are interesting angles because those are the angles we have to set our servos to. Florian goes through how to solve for theta3 and theta1 in the below leg drawing from his repo. I'll add some coments to his, and also show theta2 logic.  
+![florian_leg_in_space](screenshots/florian_leg_in_space.jpg).  
+
 Florian uses several tools like the Pythagoreous theorem:
 C^2 = a^2 + b^2
 
@@ -282,6 +290,20 @@ and atan2(y, x) = theta
 This picure from wikipedia does a great job showing us how atan2 can get the angle given x and y. Picture from: Dmcq, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons  
 ![atan2](screenshots/Atan2_60.svg)  
 
+And the law of cosines. An explanation of that is [here](https://www.mathsisfun.com/algebra/trig-solving-sss-triangles.html).  
+cos(C) =  (a2 + b2 − c2)/2ab
+
+SohCahToa
+Sin(theta) = opposite/hypotenuse
+cos(theta) = adjacent/hypotenuse
+
+theta2 for this sqrt(x^2+y^2-l1^2) is E.
+so we have, 
+L4Sin(theta3) is opposite where L4 is hypotenuse, so It's like Q
+L4Cos(theta3) is adjacent, plus L2, so E.
+theta2 = atan2(z, E) - atan2(L4Sin(theta3), L3 + L4cos(theta3))
+
+solving_theta_3.png
 
 
 ### Lessons Learned
@@ -301,5 +323,7 @@ This picure from wikipedia does a great job showing us how atan2 can get the ang
 [Additional 3d Printed Parts](https://github.com/mike4192/spotMicro/blob/master/docs/additional_hardware_description.md). I used parts from mike4192 that provide more support to each leg and distribute weight to the body of the robot better.  
 [ROS Tutorials](http://wiki.ros.org/ROS/Tutorials). This is a link to ROS tutorials that go through what topics, subscribers, and other ROS concepts are and how to use them.   
 [Spot Micro Inverse Kinematics Notebook](https://gitlab.com/custom_robots/spotmicroai/simulation/-/tree/master/Basic%20simulation%20by%20user%20Florian%20Wilk/Kinematics). This is a useful jupyter-notebook put together by Florian Wilke, demonstrating how one can solve for servo angles given positiosn of legs.  
+[Law of Cosines](https://www.mathsisfun.com/algebra/trig-solving-sss-triangles.html). Explanation of one rule that allows us to solve for the angle of a triangle given all the sides.  
+[Article on IK Quadrupeds](https://www.ijstr.org/final-print/sep2017/Inverse-Kinematic-Analysis-Of-A-Quadruped-Robot.pdf). A scholarly article going through inverse kinematics for a Quarduped Robot.
 
 
