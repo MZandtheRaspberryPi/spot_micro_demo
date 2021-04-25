@@ -263,7 +263,7 @@ ROS lets many different ndoes talk to each other through topics and a publisher/
 
 You can read a bit more about ROS and look at some introductory tutorials on various aspects of the system [here](http://wiki.ros.org/ROS/Tutorials).  
 
-Mike4192's ROS node structure during regular operation (as of 4/18/2021) looks like the below. You can see 4 nodes, /spot_micro_keyboard_command_node on the far left is listening to keyboard commands and communicating with the node in the middle, /spot_micro_motion_cmd_node. It is communicating via ROS topics, namely the 5 topics you see between the two nodes. The nodes on the far right, /spot_micro_plot_node and /n__rviz are two nodes that help visualize the movement of the robot.  
+Mike4192's ROS node structure during standalone operation (ie, in simulation mode, without live robot or node that controls servos) (as of 4/18/2021) looks like the below. You can see 4 nodes, /spot_micro_keyboard_command_node on the far left is listening to keyboard commands and communicating with the node in the middle, /spot_micro_motion_cmd_node. It is communicating via ROS topics, namely the 5 topics you see between the two nodes. The nodes on the far right, /spot_micro_plot_node and /n__rviz are two nodes that help visualize the movement of the robot.  
 ![ros_node_graph](screenshots/rosgraph.png)   
 
 Here are some examples of messages that are sent on topics, that the nodes subscribe to.  
@@ -273,6 +273,23 @@ You can see the message on the /stand_cmd topic is rather simple, just a boolean
 
 The message on the /cmd_vel topic is more sophisticated. It has linear and angular velocities for the robot to move at in m/s.  
 ![cmd_vel](screenshots/cmd_vel_topic.png)   
+
+When setting up the software I ran into a couple of issues.  
+
+I initially installed Ubuntu 16.04 on a thumb drive then booted my (new) laptop off of it. Unfortunately the trackpad didn't work and neither did the WiFi. The trackpad wasn't a big issue, i plugged in a mouse, but the wifi was a bigger issue as that's how I wanted to connect to the robot. After doing some troubleshooting with drivers, I eventually switched to using a virtual machine and Oracle Virtual Box to get around both of these issues. That works fine.  
+
+Another issue I had is that my Raspberry Pi 4's WiFi didn't work to connect to other networks like my homenetwork (it just showed no other networks available). Also, it seems something in that config wasn't right as I had trouble communicating with it via ROS initially, even when connected to the Pi4's WiFi. I think the image and older version of Ubuntu wasn't compatibile by default with the Pi4's hardware. I fixed this by hardcoding some stuff in ROS, which I shouldn't have had to do. Namely, I had to add the name of my wifi network, in my case MZROBOT and .local to an environment variable, ie, ROS_HOSTNAME=MZROBOT.local to env variables (added it to ~/.bashrc, then sourced it), and I had to do the same with ROS_MASTER_URI pointing to pi at 10.42.0.1, specifically:  
+```
+export ROS_HOSTNAME=MZROBOT.local
+export ROS_MASTER_URI=http://10.42.0.1:11311/
+```  
+
+Given I couldn't connect the Pi4 to my home network, I couldn't get internet with it, and this made installing packages difficult. Most stuff I would download onto my virtual machine running Ubuntu 16.04, and then scp to the Pi. For example, to install libi2c-dev package on the Pi, i downloaded the .deb file to my VM, copied it to the Pi, and then installed it from the Pi .deb file.  
+```
+scp libi2c-dev_3.1.1-1_all.deb ubuntu@10.42.0.1:~/
+sudo dpkg -i libi2c-dev_3.1.1-1_all.deb
+
+```  
 
 ### Software (Kinematics and Walking Algo)  
 To get Spot Micro walking, let's first understand the motors used, the hobbyist servo motors. A servo has an output shaft that can be commanded to a certain angle with a high degree of accuracy. A typical hobbyist servo has a range of 0 to 180 degrees. Here's a detailed look at a servo motor, from Wikipedia at: By oomlout - SERV-03-MI (Micro Servo), CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=19867075  
