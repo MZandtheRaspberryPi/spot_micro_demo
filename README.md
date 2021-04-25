@@ -9,7 +9,15 @@ This was a fun project where I 3d printed the robot, planned the hardware, assem
 [Timeline](#Timeline)  
 [Planning the Electronics](#Planning-the-Electronics)  
 [Gathering the Parts](#Gathering-the-Parts)  
-
+[Hardware 3d Printed Body](#Hardware-3d-Printed-Body)  
+[Hardware Assembly](#Hardware-Assembly)  
+[Hardware Electronics](#Hardware-Electronics)  
+[Software OS](#Software-OS)  
+[Software Kinematics and Walking Algo](#Software-Kinematics-and-Walking-Algo)  
+[Lessons Learned](#Lessons-Learned)  
+[Future Extensions](#Future-Extensions)  
+[Collaborate](#Collaborate)  
+[Links to Resources](#Links-to-Resources)
 
 
 ### Intro
@@ -28,8 +36,10 @@ We'll talk about:
 1. [Planning the Electronics](#Planning-the-Electronics)
 2. [Gathering the Parts](#Gathering-the-Parts)
 3. [Hardware 3d Printed Body](#Hardware-3d-Printed-Body)
-4. Assemble hardware
-5. Integrate Software
+4. [Hardware Assembly](#Hardware-Assembly)
+5. [Hardware Electronics](#Hardware-Electronics)
+6. [Software OS](#Software-OS)
+7. [Software Kinematics and Walking Algo](#Software-Kinematics-and-Walking-Algo)
 
 ### Timeline
 August 2020  
@@ -165,7 +175,7 @@ I had trouble fitting the sole of the foot to the foot. I realized that my 3d pr
 
 I also had some trouble with redesigning and printing the mounting for all my electronics. I was using an RPI4 and a differently sized motor driver board than many others, so had to model this in Fusion360 and print it out myself. This was iterative and took me much trial and error. In retrospect, I would print a small piece with mounting holes for the motor driver board, test fit this, then integrate it into a larger 3d modelled piece to reduce trial/error time.
 
-### Hardware (Assembly)
+### Hardware Assembly
 Once I had printed out all the parts I had to assemble them. Actually this distinction between printing and assembly is an artificial one, like many human constructs invented to bring some semblence of order and normality to a chaotic and shifting reality. I actually printed and assembled continually, for example when I had printed out the chasis parts I assembled them and then the legs parts I printed and assembled. There was a lot of taking apart stuff and putting it back together to fix stuff even when I had all the parts printed.  
 
 One of the first pieces I printed and assembled in September was the chasis:  
@@ -205,7 +215,7 @@ One of my most frustrating issues came when I burned out a servo and needed to r
 In the picture below, you can see I cut through the two parts. The yellow fillament is part of one piece that's been cut away, and it joins to the black piece via that screw and nutt. You can see when I rotate the screw, the nutt turns, which means the screw will never come out.  
 ![screw_rotation](screenshots/screw_rotation.gif)  
 
-### Hardware (Electronics)
+### Hardware Electronics
 Assembling the electronics was interesting and complex. I worked with a lot of tools like soldering irons, wire strippers, eletrical tape, helping hands, micrometer, exacto knife, zip tie, and glues. Some of these like the multimeter were new to me and I had to learn. Here's an example of my workbench post one repair:  
 ![ex_workbench](screenshots/20210101_183857.jpg)  
 
@@ -267,7 +277,7 @@ When soldering wires to the BMS, I ran into some trouble getting the solder to s
 
 That said, with the BMS system I would encounter an issue where it would cut voltage from 7.4v to 3 or 4vs shortly after turning a system on. I think I may have shorted that board in testing, so I eventually removed it which is a bit dangerous as there's nothing protecting the lipo now.
 
-### Software (OS)
+### Software OS
 For software, I used Mike4192's code repository and contributed to it. The big reason I liked his approach was because it was based on Robot Operating System (ROS) which is a middleware system that makes it easy to integrate and add stuff on.  
 
 ROS lets many different ndoes talk to each other through topics and a publisher/subscriber model over a network. You can imagine one node with a camera, one node doing computer vision off of the camera, and one node controlling movement of the robot. The computer vision could be on a server running on the local network, the movement control on a microcontroller on the robot as well as the camera. That's powerful!  
@@ -302,7 +312,7 @@ sudo dpkg -i libi2c-dev_3.1.1-1_all.deb
 
 ```  
 
-### Software (Kinematics and Walking Algo)  
+### Software Kinematics and Walking Algo  
 To get Spot Micro walking, let's first understand the motors used, the hobbyist servo motors. A servo has an output shaft that can be commanded to a certain angle with a high degree of accuracy. A typical hobbyist servo has a range of 0 to 180 degrees. Here's a detailed look at a servo motor, from Wikipedia at: By oomlout - SERV-03-MI (Micro Servo), CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=19867075  
 ![servo](screenshots/Micro_servo.jpg)
 
