@@ -344,6 +344,7 @@ cos(C) =  (a2 + b2 − c2)/2ab
 SohCahToa
 Sin(theta) = opposite/hypotenuse
 cos(theta) = adjacent/hypotenuse
+tan(theta) = opposite/adjacent  
 
 theta2 for this sqrt(x^2+y^2-l1^2) is E.
 so we have, 
@@ -351,7 +352,11 @@ L4Sin(theta3) is opposite where L4 is hypotenuse, so It's like Q
 L4Cos(theta3) is adjacent, plus L2, so E.
 theta2 = atan2(z, E) - atan2(L4Sin(theta3), L3 + L4cos(theta3))
 
-solving_theta_3.png  
+A picture I put together while working through how to solve Theta 3:  
+[!Theta 3](screenshots/solving_theta_3.png)  
+
+And a similar picture I put together while working through how to solve Theta 2:  
+[!Theta 2](screenshots/theta2.png)  
 
 One initial challenge in setting up the robot to walk was the calibration of the servos. Depending on how you install the servos and how you tell the robot the order of them, you can see weird stuff. For instance in the below screensot my robot was scrunched like bug because of bad calibration. You can see its kind of doing the idle pose, but shifted. That's because I had consistently mixed up the elbow joint with the hip joint in calibration for all four legs.  
 ![software_challenge](screenshots/20201221_194550.jpg)   
