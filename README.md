@@ -81,7 +81,7 @@ December 2020
 * Acheived goal of walking  
 
 ### Story of this Robot  
-This robot has a vibrant and big community around it. The homepage is [here](https://spotmicroai.readthedocs.io/en/latest/) though in the meantime many different builders have their own repos and things are less centralized. This robot started with one person, Deok-yeon Kim. They modelled the 3d parts of this robot and published them online. The Spot robot by Boston Dynamics is an incredible piece of engineering, but its also incredibly expensive. This is a hobbyist quadruped that is more approachable from a pricing standpoint.  
+This robot has a vibrant and big community around it. The homepage is [here](https://spotmicroai.readthedocs.io/en/latest/) though in the meantime many different builders have their own repos and things are less centralized. This robot started with one person, Deok-yeon Kim. They modelled the 3d parts of this robot and published them online in early 2019. The Spot robot by Boston Dynamics is an incredible piece of engineering, but its also incredibly expensive. This is a hobbyist quadruped that is more approachable from a pricing standpoint.  
 ![deokyeonkimmodel](screenshots/deokyeonkim_model.png)  
 
 Deok-yeon Kim's design took off online, but they had to do military service so some other community members took over the project. One of the steps was taking Deok-yeon Kim's designs and remodeling them to be easier for others to modify. Another step was making a website and a slack channel to coordinate makers. From here things took off and people started testing electronics, publishing their builds and code to walk, and more.  
