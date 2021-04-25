@@ -336,7 +336,7 @@ Let's show the ideas behind theta1 in some detail. Theta1 is the angle in the sh
 
 The question here is if we know what x, y, z coordinates we want the foot to be at, how can we calculate the angle to set the shoulder servo at? In my experience most of inverse kinematics comes down to drawing clever triangles that we can solve with trigonometry and geometry.    
 
-Here's a drawing of some triangles on spot. You can see the angle we are interested in Theta1, in purple.
+Here's a drawing of some triangles on spot, ignoring one axis, the Z-Axis. This sketch is in X,Y which is sufficient to solve theta1. You can see the angle we are interested in theta1, in purple.
 ![theta1_on_spot](screenshots/theta1_on_spot.jpg)  
 
 Florian does an excellent job showing the math here. We can solve for this if we know E and F lengths, by using tangent. The tangent of an angle is equal to opposite divided by adjacent, so if we know E and F we can use arctangent to solve for the angle. We can solve for F using pythagorean's theorem. We know E by measuring the actual length of the leg and its parts. Then we know three lengths of a triangle. We can solve for Alpha using arctan, and then solve for beta using arc tan on the triangle constructed with x and Y coords. Then we can subtract beta and alpha to get to the shoulder servo angle:   
