@@ -27,7 +27,7 @@ We'll talk about:
 ### Project Phases
 1. [Planning the Electronics](#Planning-the-Electronics)
 2. [Gathering the Parts](#Gathering-the-Parts)
-3. [Hardware: 3d Printed Body](#Hardware:-3d-Printed-Body)
+3. [Hardware: 3d Printed Body](#Hardware\:-3d-Printed-Body)
 4. Assemble hardware
 5. Integrate Software
 
