@@ -14,7 +14,7 @@ We'll talk about:
 * Inverse kinematic models and how to coordinate movement across multiple joints.
 
 ### Project Phases
-1. [Planning the Electronics](###-Planning-the-Electronics)
+1. [Planning the Electronics](###Planning-the-Electronics)
 2. Gather Electronics
 3. 3d Print Parts
 4. Assemble hardware
@@ -59,7 +59,7 @@ December 2020
 * Tested a Lidar I received for Christmas, but in isolation, not with Spot Micro
 * Acheived goal of walking 
 
-### Planning the Electronics
+###Planning the Electronics
 Before you can buy parts, you have to decide what parts you need! This involved looking through various pieces of documentation [here,](https://spotmicroai.readthedocs.io/en/latest/gettingStarted/) and planning out my electronics.  
 Here is an early plan of my electronics circuit, though I didn't use a breadboard in the final build due to space constraints.  
 ![electronics](screenshots/electronics_diagram.jpg)  
