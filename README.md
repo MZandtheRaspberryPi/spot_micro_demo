@@ -27,7 +27,7 @@ We'll talk about:
 ### Project Phases
 1. [Planning the Electronics](#Planning-the-Electronics)
 2. [Gathering the Parts](#Gathering-the-Parts)
-3. [Hardware (3d-printed Body)](#Hardware-(3d-printed-Body))
+3. [Hardware: 3d Printed Body](#Hardware:-3d-Printed-Body)
 4. Assemble hardware
 5. Integrate Software
 
@@ -113,7 +113,7 @@ It ended up being a valuable lesson in international business and how to work wi
 
 Thankfully the rest of the gathering electronics was rather uneventfull and I received what I ordered. I used Bangood, Aliexpress, and Amazon for all of the electronics.
 
-### Hardware (3d-printed Body)
+### Hardware: 3d Printed Body
 I sometimes get asked, "how easy is 3d Printing?" Variations of that could include "I broke my toy, can you 3d print me a part?"  
 
 To address the first question: in my opinion 3d Printing is an amazing technology but it's not foolproof. It happens to me regularly, many months into using this technology, that my prints fail and I don't know why and have to research issues. With the printers at my office, that print ink on paper, every job I send to them works perfectly. Not so with my 3d Printer at home. So, to people looking to get into the hobby I say, "It's amazingly powerful to create and prototype. But, go into it with the mindset that stuff will break and you'll need to Google your way through and fix things on your printer."  
