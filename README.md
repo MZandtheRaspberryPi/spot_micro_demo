@@ -14,7 +14,7 @@ We'll talk about:
 * Inverse kinematic models and how to coordinate movement across multiple joints.
 
 ### Project Phases
-1. [Planning the Electronics](###Planning-the-Electronics)
+1. [Planning the Electronics](#Planning-the-Electronics)
 2. Gather Electronics
 3. 3d Print Parts
 4. Assemble hardware
