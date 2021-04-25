@@ -78,7 +78,10 @@ December 2020
 * Continued assembly, got to a point where could test with power again
 * Sprinted through config and testing to meet Dec 31st goal of walking
 * Tested a Lidar I received for Christmas, but in isolation, not with Spot Micro
-* Acheived goal of walking 
+* Acheived goal of walking  
+
+### Story of this Robot  
+This robot has a vibrant and big community around it. The homepage is [here](https://spotmicroai.readthedocs.io/en/latest/) though in the meantime many different builders have their own repos and things are less centralized. This robot started with one person in Korea, Deok-yeon Kim. They modelled the 3d parts of this robot and published them online. The Spot robot by Boston Dynamics is an incredible piece of engineering, but its also incredibly expensive. This is a hobbyist quadruped that is more approachable from a pricing standpoint. Deok-yeon Kim's design took off online, but they had to do military service so some other community members took over the project. One of the steps was taking Deok-yeon Kim's designs and remodeling them to be easier for others to modify. From here things took off and people started testing electronics, publishing their builds and code to walk, and more.  
 
 ### Planning the Electronics
 Before you can buy parts, you have to decide what parts you need! This involved looking through various pieces of documentation [here,](https://spotmicroai.readthedocs.io/en/latest/gettingStarted/) and planning out my electronics.  
