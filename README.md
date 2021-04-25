@@ -1,6 +1,16 @@
 ## Spot Micro Robot
 This was a fun project where I 3d printed the robot, planned the hardware, assembled, and used a fellow robot builder's ROS Repo to get it walking. I contributed a bit to the robot builder's ROS repo as well. You can see a video demo [here](https://www.youtube.com/watch?v=g6FMSfrcahk).  
-![spot_micro_demo](screenshots/spot_micro_demo.gif)    
+![spot_micro_demo](screenshots/spot_micro_demo.gif)   
+
+### Table of Contents
+[Intro](#Intro)  
+[Presentation Plan](#Presentation-Plan)  
+[Project Phases](#Project-Phases)  
+[Timeline](#Timeline)  
+[Planning the Electronics](#Planning-the-Electronics)  
+[Gathering the Parts](#Gathering-the-Parts)  
+
+
 
 ### Intro
 Take a moment and touch your left shoulder and then move your mouse to the top left of your computer screen. What parts of your body moved to accomplish that task? If you do it again slowly, did you move your wrist? Your elbow? Your shoulder? Your torso? I assume that most of us moved multiple body parts in coordination, and I'd also assume that the force applied with your body parts was carefully controlled and that nobody broke their laptop.    
@@ -13,10 +23,11 @@ We'll talk about:
 * The software and Robot Operating System (ROS).
 * Inverse kinematic models and how to coordinate movement across multiple joints.
 
+
 ### Project Phases
 1. [Planning the Electronics](#Planning-the-Electronics)
-2. Gather Electronics
-3. 3d Print Parts
+2. [Gathering the Parts](#Gathering-the-Parts)
+3. [Hardware (3d-printed Body)](#Hardware-(3d-printed-Body))
 4. Assemble hardware
 5. Integrate Software
 
