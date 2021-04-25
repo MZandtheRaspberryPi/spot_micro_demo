@@ -215,6 +215,8 @@ One of my most frustrating issues came when I burned out a servo and needed to r
 In the picture below, you can see I cut through the two parts. The yellow fillament is part of one piece that's been cut away, and it joins to the black piece via that screw and nutt. You can see when I rotate the screw, the nutt turns, which means the screw will never come out.  
 ![screw_rotation](screenshots/screw_rotation.gif)  
 
+In the end I was tightening screws too much in the servo horn, which meant that it was very tight to the Servo. This was a problem becauase the servo horn was shaking when trying to move to certain angles as it had trouble getting there. Undid the screw and pulled the horn out a bit, then put the screw back in making sure not to overtighten fixed this.  
+
 ### Hardware Electronics
 Assembling the electronics was interesting and complex. I worked with a lot of tools like soldering irons, wire strippers, eletrical tape, helping hands, micrometer, exacto knife, zip tie, and glues. Some of these like the multimeter were new to me and I had to learn. Here's an example of my workbench post one repair:  
 ![ex_workbench](screenshots/20210101_183857.jpg)  
