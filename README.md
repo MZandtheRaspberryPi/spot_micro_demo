@@ -328,8 +328,19 @@ I think that he based some of his figuring off an article that he mentions, in t
 Just for fun, which analytical methods???  
 ![which_methods](screenshots/which_analytical_methods.png)  
 
-In the below drawing from Florian Wilk, theta1, theta2, theta3 are interesting angles because those are the angles we have to set our servos to. Florian goes through how to solve for theta3 and theta1 in the below leg drawing from his repo. I'll add some coments to his, and also show theta2 logic.  
+In the below drawing from Florian Wilk, theta1, theta2, theta3 are interesting angles because those are the angles we have to set our servos to. Florian goes through how to solve for theta3 and theta1 in the below leg drawing from his repo. I'll add some coments to his and add in pictures for theta2 and theta3.  
 ![florian_leg_in_space](screenshots/florian_leg_in_space.jpg).  
+
+Let's show the ideas behind theta1 in some detail. Theta1 is the angle in the shoulder servo. You can see me manually moving this servo in the below gif:  
+![theta1](screenshots/theta_1.gif)  
+
+The question here is if we know what x, y, z coordinates we want the foot to be at, how can we calculate the angle to set the shoulder servo at? In my experience most of inverse kinematics comes down to drawing clever triangles that we can solve with trigonometry and geometry.    
+
+Here's a drawing of some triangles on spot. You can see the angle we are interested in Theta1, in purple.
+![theta1_on_spot](screenshots/theta1_on_spot.jpg)  
+
+Florian does an excellent job showing the math here. We can solve for this if we know E and F lengths, by using tangent. The tangent of an angle is equal to opposite divided by adjacent, so if we know E and F we can use arctangent to solve for the angle. We can solve for F using pythagorean's theorem. We know E by measuring the actual length of the leg and its parts. Then we know three lengths of a triangle. We can solve for Alpha using arctan, and then solve for beta using arc tan on the triangle constructed with x and Y coords. Then we can subtract beta and alpha to get to the shoulder servo angle:   
+![florian_theta1](screenshots/florian_math_theta1.jpg)  
 
 Florian uses several tools like the Pythagoreous theorem:
 C^2 = a^2 + b^2
