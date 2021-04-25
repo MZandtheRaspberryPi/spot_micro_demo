@@ -354,11 +354,16 @@ solving_theta_3.png
 One initial challenge in setting up the robot to walk was the calibration of the servos. Depending on how you install the servos and how you tell the robot the order of them, you can see weird stuff. For instance in the below screensot my robot was scrunched like bug because of bad calibration. You can see its kind of doing the idle pose, but shifted. That's because I had consistently mixed up the elbow joint with the hip joint in calibration for all four legs.  
 ![software_challenge](screenshots/20201221_194550.jpg)   
 
-### Lessons Learned
+### Lessons Learned  
+Most of the lessons learned are tucked into the various project phases sections. I generally say something like "I ran into a lot of problems" or "One challenge was" and that's the section where i talk about pitfalls for makers of this robot. It's always at the end of the sections, so look there.  
 
-### Future Extensions
+### Future Extensions  
+Some other ideas I have that I think would be cool to add:  
+* lidar (mike1492 has done this)
+* Animations to an idle pose, like stretches and wiggles
 
-### Collaborate
+### Collaborate  
+One thing I don't do a lot is collaborate with other makers. I'm into 3d-Printing and Programming right now, if you are into that kind of thing and want to build something together feel free to reach out.  
 
 ### Links to Resources
 [Homepage for SpotMicro Community](https://spotmicroai.readthedocs.io/en/latest/). This has links to various 3d modelling files, instructions on one version of software, and links to other resources.  
@@ -373,5 +378,3 @@ One initial challenge in setting up the robot to walk was the calibration of the
 [Spot Micro Inverse Kinematics Notebook](https://gitlab.com/custom_robots/spotmicroai/simulation/-/tree/master/Basic%20simulation%20by%20user%20Florian%20Wilk/Kinematics). This is a useful jupyter-notebook put together by Florian Wilke, demonstrating how one can solve for servo angles given positiosn of legs.  
 [Law of Cosines](https://www.mathsisfun.com/algebra/trig-solving-sss-triangles.html). Explanation of one rule that allows us to solve for the angle of a triangle given all the sides.  
 [Article on IK Quadrupeds](https://www.ijstr.org/final-print/sep2017/Inverse-Kinematic-Analysis-Of-A-Quadruped-Robot.pdf). A scholarly article going through inverse kinematics for a Quarduped Robot.
-
-
