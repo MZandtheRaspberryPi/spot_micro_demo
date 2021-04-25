@@ -342,6 +342,8 @@ Here's a drawing of some triangles on spot, ignoring one axis, the Z-Axis. This 
 Florian does an excellent job showing the math here. We can solve for F using pythagorean's theorem. once we have F, we can solve for E, again using pythagorean's theorem. We can solve for Alpha angle if we know E and F lengths, by using tangent. The tangent of an angle is equal to opposite divided by adjacent, so if we know E and F we can use arctangent to solve for the angle. Thus we solve for Alpha using arctan, and then solve for beta using arc tan on the triangle constructed with x and Y coords. Then we can subtract beta and alpha to get to the shoulder servo angle:   
 ![florian_theta1](screenshots/florian_math_theta1.jpg)  
 
+You can look at Florian's explanations for Theta2 and Theta3, and perhaps my images below will be helpful too, but moving on, if you navigate to Florian's jupyter notebook you can run cells and see these calculations live. Florian starts with one leg, moves to 4, then adds the body linking everything together with transforms. You can then see how positions for the legs in X Y Z are given and angles of servos are solved for. Check out the kinematic.ipynb [here](https://gitlab.com/custom_robots/spotmicroai/simulation/-/tree/master/Basic%20simulation%20by%20user%20Florian%20Wilk/Kinematics).  
+
 A summary of tools that Florian uses follows. The Pythagoreous theorem:
 C^2 = a^2 + b^2
 
