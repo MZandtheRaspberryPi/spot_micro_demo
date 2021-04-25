@@ -123,6 +123,9 @@ Here you can see me opening the piece of the model I want to print:
 The software will slice it into layers for the 3d Printer and generate any support needed (as you can't print on air).  
 ![all_layers](screenshots/all_layers_slice.png)  
 
+Note that how you choose to orient the part has a big impact on how it prints. Below, I've rotated that same part, and you can see print time is now 12 hours, versus 6 before. This is because you can't print on thin air, so to print the top of the part, the slicing software is generating support material, those columns you see inside the body, so that it can print on those. In this scenario, its probably better to print with the earlier orientation to not take so much time, or support, which can leave scarring on parts when its removed.  
+![bad_support](screenshots/cura_support_example.png)  
+
 Behind the scenes it will generate the gcode for the printer, which is a set of instructions like move the nozzle to this xyz point and extrude this amount of plastic. Here I'm highlighting one of the first lines where it sends to head of the printer to the bottom left corner, "homing it". Then I'm highlighting one section where the print starts which is a series of commands to move the nozzle and extrude plastic. That later section basically says go to 79mmX and 56mmY and extrude to the .18mm fillament point.  
 ![gcode](screenshots/g_code_example_2.png)  
 
