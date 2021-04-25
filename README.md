@@ -7,6 +7,7 @@ This was a fun project where I 3d printed the robot, planned the hardware, assem
 [Presentation Plan](#Presentation-Plan)  
 [Project Phases](#Project-Phases)  
 [Timeline](#Timeline)  
+[Story of this Robot](#Story-of-this-Robot)
 [Planning the Electronics](#Planning-the-Electronics)  
 [Gathering the Parts](#Gathering-the-Parts)  
 [Hardware 3d Printed Body](#Hardware-3d-Printed-Body)  
