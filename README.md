@@ -363,7 +363,7 @@ Some other ideas I have that I think would be cool to add:
 * Animations to an idle pose, like stretches and wiggles
 
 ### Collaborate  
-One thing I don't do a lot is collaborate with other makers. I'm into 3d-Printing and Programming right now, if you are into that kind of thing and want to build something together feel free to reach out.  
+One thing I don't do a lot is collaborate with other makers. I'm into 3d-printing and programming right now, if you are into that kind of thing and want to build something together feel free to reach out.  
 
 ### Links to Resources
 [Homepage for SpotMicro Community](https://spotmicroai.readthedocs.io/en/latest/). This has links to various 3d modelling files, instructions on one version of software, and links to other resources.  
