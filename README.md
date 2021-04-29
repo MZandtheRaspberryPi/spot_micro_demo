@@ -287,7 +287,7 @@ When soldering wires to the BMS, I ran into some trouble getting the solder to s
 That said, with the BMS system I would encounter an issue where it would cut voltage from 7.4v to 3 or 4vs shortly after turning a system on. I think I may have shorted that board in testing, so I eventually removed it which is a bit dangerous as there's nothing protecting the lipo now.
 
 ### Software OS
-For software, I used Mike4192's code repository and contributed to it. The big reason I liked his approach was because it was based on Robot Operating System (ROS) which is a middleware system that makes it easy to integrate and add stuff on.  
+For software, I used Mike4192's code repository and contributed to it [here](https://github.com/mike4192/spotMicro). The big reason I liked his approach was because it was based on Robot Operating System (ROS) which is a middleware system that makes it easy to integrate and add stuff on.  
 
 ROS lets many different ndoes talk to each other through topics and a publisher/subscriber model over a network. You can imagine one node with a camera, one node doing computer vision off of the camera, and one node controlling movement of the robot. The computer vision could be on a server running on the local network, the movement control on a microcontroller on the robot as well as the camera. That's powerful!  
 
@@ -398,4 +398,5 @@ One thing I don't do a lot is collaborate with other makers. I'm into 3d-printin
 [ROS Tutorials](http://wiki.ros.org/ROS/Tutorials). This is a link to ROS tutorials that go through what topics, subscribers, and other ROS concepts are and how to use them.   
 [Spot Micro Inverse Kinematics Notebook](https://gitlab.com/custom_robots/spotmicroai/simulation/-/tree/master/Basic%20simulation%20by%20user%20Florian%20Wilk/Kinematics). This is a useful jupyter-notebook put together by Florian Wilke, demonstrating how one can solve for servo angles given positiosn of legs.  
 [Law of Cosines](https://www.mathsisfun.com/algebra/trig-solving-sss-triangles.html). Explanation of one rule that allows us to solve for the angle of a triangle given all the sides.  
-[Article on IK Quadrupeds](https://www.ijstr.org/final-print/sep2017/Inverse-Kinematic-Analysis-Of-A-Quadruped-Robot.pdf). A scholarly article going through inverse kinematics for a Quarduped Robot.
+[Article on IK Quadrupeds](https://www.ijstr.org/final-print/sep2017/Inverse-Kinematic-Analysis-Of-A-Quadruped-Robot.pdf). A scholarly article going through inverse kinematics for a Quarduped Robot.  
+[Code Repository](https://github.com/mike4192/spotMicro). I used Mike4192's code repository to get spot walking, and contributed to it a bit.
