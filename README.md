@@ -428,7 +428,7 @@ def drawLegPoints(p):
 ``` 
 
 From here, he creates a function to work with the body, given the pose is defined by omega,phi and psi - the rotation angles - and xm,ym and zm - the Center of the Body.
-![no_rotation](screenshots/ no_rotation.PNG)   
+![no_rotation](screenshots/no_rotation.PNG)   
 Omega: The Yaw Angle of Robot ϕ, rotation around x axis   
 ![yaw](screenshots/omega_yaw.PNG)  
 Phi: The Pitch Angle of Robot ψ, ie rotation around y axis   
