@@ -375,6 +375,67 @@ And a similar picture I put together while working through how to solve Theta 2:
 One initial challenge in setting up the robot to walk was the calibration of the servos. Depending on how you install the servos and how you tell the robot the order of them, you can see weird stuff. For instance in the below screensot my robot was scrunched like bug because of bad calibration. You can see its kind of doing the idle pose, but shifted. That's because I had consistently mixed up the elbow joint with the hip joint in calibration for all four legs.  
 ![software_challenge](screenshots/20201221_194550.jpg)   
 
+When we're thinking about forward kinematics, taking leg angles and using them to calculate body position and such.  
+
+Let's first take the leg angles and draw the leg in space. Florian has the function below. We can see that he's calculating coordinates for each endpoint of piece of leg.:   
+![t1](screenshots/t1.PNG)   
+
+```
+def calcLegPoints(angles):
+    
+    (theta1,theta2,theta3)=angles
+    theta23=theta2+theta3
+
+    T0=np.array([0,0,0,1])
+    # -l1*cos(theta1) is x of first part of leg
+    # as cos(theta1) = adjacent / hypotenuse
+    # and here adjacent is X of first part of leg
+    # and here hypotenuse is L1
+    # l1*sin(theta1) is y of first part of leg
+    # as sin(theta1) is opposite / hypo
+    # and here opposite is y of first part of leg
+    # and here hypo is l1
+    T1=T0+np.array([-l1*cos(theta1),l1*sin(theta1),0,0])
+    # from here on, tough to follow, but we're building out the other
+    # coordinates by adding to prior ones, and solving for x, y, z of new ones
+    T2=T1+np.array([-l2*sin(theta1),-l2*cos(theta1),0,0])
+    T3=T2+np.array([-l3*sin(theta1)*cos(theta2),-l3*cos(theta1)*cos(theta2),l3*sin(theta2),0])
+    T4=T3+np.array([-l4*sin(theta1)*cos(theta23),-l4*cos(theta1)*cos(theta23),l4*sin(theta23),0])
+        
+    return np.array([T0,T1,T2,T3,T4])
+```    
+
+That he'll then use to draw the leg in space:  
+```
+def drawLegPoints(p):
+    # p is now an array of arrays
+    # first array is shoulder x y z coords
+    # second array is after l1
+    # third array is after l2
+    # fourth array is after l3
+    # fifth array is after l4, ie, the endpoint of the foot
+    # we plot the first and fifth seperately with circles
+    # the other 3 we plot using lines to connect
+    print(p)
+    # given xs, ys, and z,s connect em all w/ lines
+    plt.plot([p[0][0],p[1][0],p[2][0],p[3][0],p[4][0]], 
+             [p[0][2],p[1][2],p[2][2],p[3][2],p[4][2]],
+             [p[0][1],p[1][1],p[2][1],p[3][1],p[4][1]], 'k-', lw=3)
+    # add shoulder
+    plt.plot([p[0][0]],[p[0][2]],[p[0][1]],'bo',lw=2)
+    # add foot
+    plt.plot([p[4][0]],[p[4][2]],[p[4][1]],'ro',lw=2)
+``` 
+
+From here, he creates a function to work with the body, given the pose is defined by omega,phi and psi - the rotation angles - and xm,ym and zm - the Center of the Body.
+![no_rotation](screenshots/ no_rotation.PNG)   
+Omega: The Yaw Angle of Robot ϕ, rotation around x axis   
+![yaw](screenshots/omega_yaw.PNG)  
+Phi: The Pitch Angle of Robot ψ, ie rotation around y axis   
+![pitch](screenshots/phi_pitch_rotation.PNG)    
+Psi: The Roll Angle of Robot ω, ie rotation around z axis     
+![roll](screenshots/psi_roll.PNG)      
+
 ### Lessons Learned  
 Most of the lessons learned are tucked into the various project phases sections. I generally say something like "I ran into a lot of problems" or "One challenge was" and that's the section where i talk about pitfalls for makers of this robot. It's always at the end of the sections, so look there.  
 
